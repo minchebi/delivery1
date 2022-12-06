@@ -1,18 +1,16 @@
 package mymall.domain;
 
-import mymall.domain.*;
 import mymall.infra.AbstractEvent;
-import lombok.*;
+import lombok.Data;
 import java.util.*;
+
+
 @Data
-@ToString
 public class Picked extends AbstractEvent {
 
     private Long id;
     private String orderId;
     private String status;
     private String addr;
-    private Object option;
+    private List<String> option;
 }
-
-
