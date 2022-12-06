@@ -61,6 +61,12 @@ public class Order  {
     @ElementCollection
     
     private List<String> option;
+    
+    
+    
+    
+    
+    private String orderDetail;
 
     @PostPersist
     public void onPostPersist(){

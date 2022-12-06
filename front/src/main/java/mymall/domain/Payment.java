@@ -1,6 +1,7 @@
 package mymall.domain;
 
 import mymall.domain.Paid;
+import mymall.domain.PayCanceled;
 import mymall.FrontApplication;
 import javax.persistence.*;
 import java.util.List;
@@ -44,6 +45,11 @@ public class Payment  {
         Paid paid = new Paid(this);
         paid.publishAfterCommit();
 
+
+
+        PayCanceled payCanceled = new PayCanceled(this);
+        payCanceled.publishAfterCommit();
+
     }
 
     public static PaymentRepository repository(){
@@ -73,6 +79,27 @@ public class Payment  {
 
             Paid paid = new Paid(payment);
             paid.publishAfterCommit();
+
+         });
+        */
+
+        
+    }
+    public static void payCancel(OrderCancel orderCancel){
+
+        /** Example 1:  new item 
+        Payment payment = new Payment();
+        repository().save(payment);
+
+        */
+
+        /** Example 2:  finding and process
+        
+        repository().findById(orderCancel.get???()).ifPresent(payment->{
+            
+            payment // do something
+            repository().save(payment);
+
 
          });
         */
