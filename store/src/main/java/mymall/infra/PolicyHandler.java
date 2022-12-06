@@ -88,6 +88,22 @@ public class PolicyHandler{
         
 
     }
+    @StreamListener(value=KafkaProcessor.INPUT, condition="headers['type']=='CancelDelivery'")
+    public void wheneverCancelDelivery_UpdateStatus(@Payload CancelDelivery cancelDelivery){
+
+        CancelDelivery event = cancelDelivery;
+        System.out.println("\n\n##### listener UpdateStatus : " + cancelDelivery + "\n\n");
+
+
+        
+
+        // Sample Logic //
+        Order.updateStatus(event);
+        
+
+        
+
+    }
 
 }
 

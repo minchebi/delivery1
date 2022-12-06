@@ -96,6 +96,27 @@ public class Order  {
 
         
     }
+    public static void updateStatus(CancelDelivery cancelDelivery){
+
+        /** Example 1:  new item 
+        Order order = new Order();
+        repository().save(order);
+
+        */
+
+        /** Example 2:  finding and process
+        
+        repository().findById(cancelDelivery.get???()).ifPresent(order->{
+            
+            order // do something
+            repository().save(order);
+
+
+         });
+        */
+
+        
+    }
 
 
 }
