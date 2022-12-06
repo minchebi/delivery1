@@ -114,6 +114,60 @@ public class PolicyHandler{
         
 
     }
+    @StreamListener(value=KafkaProcessor.INPUT, condition="headers['type']=='CancelDelivery'")
+    public void wheneverCancelDelivery_Notify(@Payload CancelDelivery cancelDelivery){
+
+        CancelDelivery event = cancelDelivery;
+        System.out.println("\n\n##### listener Notify : " + cancelDelivery + "\n\n");
+
+        // REST Request Sample
+        
+        // orderService.getOrder(/** mapping value needed */);
+
+
+        
+
+        // Sample Logic //
+
+        
+
+    }
+    @StreamListener(value=KafkaProcessor.INPUT, condition="headers['type']=='OrderCancel'")
+    public void wheneverOrderCancel_Notify(@Payload OrderCancel orderCancel){
+
+        OrderCancel event = orderCancel;
+        System.out.println("\n\n##### listener Notify : " + orderCancel + "\n\n");
+
+        // REST Request Sample
+        
+        // orderService.getOrder(/** mapping value needed */);
+
+
+        
+
+        // Sample Logic //
+
+        
+
+    }
+    @StreamListener(value=KafkaProcessor.INPUT, condition="headers['type']=='PayCanceled'")
+    public void wheneverPayCanceled_Notify(@Payload PayCanceled payCanceled){
+
+        PayCanceled event = payCanceled;
+        System.out.println("\n\n##### listener Notify : " + payCanceled + "\n\n");
+
+        // REST Request Sample
+        
+        // orderService.getOrder(/** mapping value needed */);
+
+
+        
+
+        // Sample Logic //
+
+        
+
+    }
 
 }
 

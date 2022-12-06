@@ -12,6 +12,7 @@ public class Order {
     private String customerId;
     private String status;
     private Object option;
+    private String orderDetail;
 }
 
 

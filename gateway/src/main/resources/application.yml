@@ -15,7 +15,7 @@ spring:
         - id: store
           uri: http://localhost:8082
           predicates:
-            - Path=/foodCookings/**, 
+            - Path=/foodCookings/**, /orders/**, 
         - id: rider
           uri: http://localhost:8083
           predicates:
@@ -54,7 +54,7 @@ spring:
         - id: store
           uri: http://store:8080
           predicates:
-            - Path=/foodCookings/**, 
+            - Path=/foodCookings/**, /orders/**, 
         - id: rider
           uri: http://rider:8080
           predicates:

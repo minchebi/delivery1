@@ -18,6 +18,7 @@ import mymall.domain.*;
 @Transactional
 public class PolicyHandler{
     @Autowired FoodCookingRepository foodCookingRepository;
+    @Autowired OrderRepository orderRepository;
     
     @StreamListener(KafkaProcessor.INPUT)
     public void whatever(@Payload String eventString){}
@@ -48,6 +49,40 @@ public class PolicyHandler{
 
         // Sample Logic //
         FoodCooking.updateStatus(event);
+        
+
+        
+
+    }
+
+    @StreamListener(value=KafkaProcessor.INPUT, condition="headers['type']=='CancelDelivery'")
+    public void wheneverCancelDelivery_OrderCancel(@Payload CancelDelivery cancelDelivery){
+
+        CancelDelivery event = cancelDelivery;
+        System.out.println("\n\n##### listener OrderCancel : " + cancelDelivery + "\n\n");
+
+
+        
+
+        // Sample Logic //
+        Order.orderCancel(event);
+        
+
+        
+
+    }
+
+    @StreamListener(value=KafkaProcessor.INPUT, condition="headers['type']=='OrderCancel'")
+    public void wheneverOrderCancel_UpdateStatus(@Payload OrderCancel orderCancel){
+
+        OrderCancel event = orderCancel;
+        System.out.println("\n\n##### listener UpdateStatus : " + orderCancel + "\n\n");
+
+
+        
+
+        // Sample Logic //
+        Order.updateStatus(event);
         
 
         

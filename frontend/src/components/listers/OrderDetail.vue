@@ -9,18 +9,8 @@
                 <String label="OrderId" v-model="item.orderId" :editMode="editMode" @change="change" />
             </div>
             <div>
-                <String label="FoodId" v-model="item.foodId" :editMode="editMode" @change="change" />
-            </div>
-            <div>
-                <String label="Addr" v-model="item.addr" :editMode="editMode" @change="change" />
-            </div>
-            <div>
-                <String label="CustomerId" v-model="item.customerId" :editMode="editMode" @change="change" />
-            </div>
-            <div>
                 <String label="Status" v-model="item.status" :editMode="editMode" @change="change" />
             </div>
-            <StringManager offline label="Option" v-model="item.option" :editMode="false" @change="change" />
         </v-card-text>
 
         <v-card-actions>

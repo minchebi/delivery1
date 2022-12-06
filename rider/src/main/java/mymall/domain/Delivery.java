@@ -2,6 +2,7 @@ package mymall.domain;
 
 import mymall.domain.Picked;
 import mymall.domain.Delivered;
+import mymall.domain.CancelDelivery;
 import mymall.RiderApplication;
 import javax.persistence.*;
 import java.util.List;
@@ -61,6 +62,11 @@ public class Delivery  {
 
         Delivered delivered = new Delivered(this);
         delivered.publishAfterCommit();
+
+
+
+        CancelDelivery cancelDelivery = new CancelDelivery(this);
+        cancelDelivery.publishAfterCommit();
 
     }
 

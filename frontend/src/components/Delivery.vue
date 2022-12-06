@@ -41,6 +41,7 @@
             >
                 Pick
                 CofirmDelivered
+                Canceldelivery
             </v-btn>
             <v-btn
                     color="deep-purple lighten-2"

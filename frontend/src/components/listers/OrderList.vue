@@ -12,20 +12,12 @@
                             
                             
                             
-                            
-                            
-                            
-                            
                         </v-list-item-title>
 
                         <v-list-item-subtitle style="font-size:25px; font-weight:700;">
                             [ Id :  {{data.id }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                             [ OrderId :  {{data.orderId }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                            [ FoodId :  {{data.foodId }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                            [ Addr :  {{data.addr }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                            [ CustomerId :  {{data.customerId }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                             [ Status :  {{data.status }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                            [ Option :  {{data.option }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                         </v-list-item-subtitle>
 
                     </v-list-item-content>
@@ -108,11 +100,7 @@
             
             this.newValue = {
                 'orderId': '',
-                'foodId': '',
-                'addr': '',
-                'customerId': '',
                 'status': '',
-                'option': [],
             }
         },
         methods: {

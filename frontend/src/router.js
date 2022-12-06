@@ -12,6 +12,8 @@ import PaymentDetail from "./components/listers/PaymentDetail"
 
 import FoodCookingManager from "./components/listers/FoodCookingCards"
 import FoodCookingDetail from "./components/listers/FoodCookingDetail"
+import OrderManager from "./components/listers/OrderCards"
+import OrderDetail from "./components/listers/OrderDetail"
 
 import DeliveryManager from "./components/listers/DeliveryCards"
 import DeliveryDetail from "./components/listers/DeliveryDetail"
@@ -54,6 +56,16 @@ export default new Router({
                 path: '/foodCookings/:id',
                 name: 'FoodCookingDetail',
                 component: FoodCookingDetail
+            },
+            {
+                path: '/orders',
+                name: 'OrderManager',
+                component: OrderManager
+            },
+            {
+                path: '/orders/:id',
+                name: 'OrderDetail',
+                component: OrderDetail
             },
 
             {

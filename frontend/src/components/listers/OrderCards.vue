@@ -74,6 +74,7 @@
                 'customerId': '',
                 'status': '',
                 'option': [],
+                'orderDetail': '',
             }
         },
         methods:{
